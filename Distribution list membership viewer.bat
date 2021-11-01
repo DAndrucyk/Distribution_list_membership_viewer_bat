@@ -25,7 +25,7 @@ For /L %%i in (%DLSI%,1,%DLEI%) do (
 
 	rem displays the employee id and display name of those in the group
 	rem check readme file for more options on what can be displayed
-	dsquery group -samid "!DLArray[%%i]!" | dsget group -members | dsget user -empid -display
+	dsquery group -samid "!DLArray[%%i]!" | dsget group -members | dsget user -samid -display
 
 	rem creating two blank lines to seperate out different groups
 	echo.
